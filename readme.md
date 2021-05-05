@@ -1,0 +1,1 @@
+Simple bumper for discord with random time integers so your disboard account doesnt get flagged
