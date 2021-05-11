@@ -1,21 +1,14 @@
-import asyncio
-import discord
-import random
-import time
-
+import asyncio, discord, random, time, json
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix=".", self_bot=True)
-
-token = "token :D"
-num = random.randint(7263, 7500)
 
 @bot.command(pass_context=True)
 async def bump(ctx):
     await ctx.message.delete()
     while True:
         await ctx.send('!d bump')
-        time.sleep(num)
+        time.sleep(random.randint(7263, 7500))
 
 @bot.command(pass_context=True)
 async def ping(ctx):
@@ -29,4 +22,4 @@ async def on_ready():
     print(bot.user.id)
 
 
-bot.run(token, bot=False)
+bot.run(config['token'], bot=False)
